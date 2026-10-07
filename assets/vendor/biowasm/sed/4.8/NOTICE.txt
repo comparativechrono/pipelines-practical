@@ -1,12 +1,12 @@
 GNU sed 4.8
-License: GPL-3.0-or-later
+Licence: GPL-3.0-or-later (COPYING and LICENSE in this folder)
 Upstream source: https://ftp.gnu.org/gnu/sed/sed-4.8.tar.xz
-WebAssembly build provider: Biowasm (https://biowasm.com/)
-Build source and scripts: https://github.com/biowasm/biowasm
-Artifact origin: https://biowasm.com/cdn/v3/sed/4.8/
-Retrieved: 2026-09-30
+  (a copy is in ../../../licenses/sources/, with the build recipe in ../../../licenses/biowasm-build/)
+WebAssembly build: Biowasm (https://biowasm.com/), downloaded from
+  https://biowasm.com/cdn/v3/sed/4.8/ on 2026-09-30
+Build recipes: https://github.com/biowasm/biowasm (a pinned copy is in ../../../licenses/biowasm-build/)
 
-Local JavaScript glue modification: record each Emscripten exit status in
-Module.__exitStatus so the practical runtime can preserve command failures.
-Modified files: sed.js
-The WebAssembly binaries and associated data assets are unmodified.
+Local change to the JavaScript loader: exit(status) is recorded as Module.__exitStatus, so that the
+terminal of the practical keeps the exit status of a failed command.
+Modified file: sed.js
+sed.wasm is unmodified.
